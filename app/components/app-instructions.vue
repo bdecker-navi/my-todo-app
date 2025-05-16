@@ -15,7 +15,13 @@
           label: 'Nuxt UI Pro Documentation',
           to: 'https://ui.nuxt.com/components/app',
           target: '_blank',
-          icon: 'i-lucide-shopping-cart',
+          icon: 'i-lucide:braces',
+          color: 'neutral'
+        }, {
+          label: 'TODO List Page',
+          to: 'todo/1',
+          target: '_blank',
+          icon: 'i-lucide-file-code',
           color: 'neutral'
         }]"
       />

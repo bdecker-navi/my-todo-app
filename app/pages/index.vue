@@ -1,3 +1,10 @@
+<script setup lang="ts">
+</script>
+
 <template>
-  <div />
+  <app-instructions />
 </template>
+
+<style scoped>
+
+</style>

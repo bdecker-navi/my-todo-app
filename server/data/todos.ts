@@ -1,4 +1,4 @@
-import type { Todo } from '~/types/todo'
+import type { Todo } from "~~/server/types/todo"
 
 export const todos: Todo[] = [
   { id: 1, userId: 1, title: 'Buy groceries', completed: false },

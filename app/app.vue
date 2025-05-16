@@ -21,11 +21,20 @@ useSeoMeta({
   <UApp>
     <UHeader>
       <template #left>
-        <user-info />
+        <div v-if="useRoute().name === 'todo-id'">
+          <user-info />
+        </div>
+        <div v-else>
+          <h1>Hello Stranger!</h1>
+        </div>
       </template>
 
       <template #right>
         <UColorModeButton />
+        <UButton
+          icon="i-lucide-house"
+          to="/"
+        />
       </template>
     </UHeader>
 

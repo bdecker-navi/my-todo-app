@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { User } from '~~/server/types/types'
+import type { User } from '~~/server/types/user'
 
 const { id } = useRoute().params
 const toast = useToast()
-const user = ref({} as User)
+const user = ref( {} as User | null)
 
 onMounted(async () => {
   await $fetch(`/api/user/${id}`, {
@@ -27,6 +27,7 @@ onMounted(async () => {
 
 <template>
   <UUser
+    v-if="user"
     :name="user?.name"
     :description="user?.email"
     :avatar="{
