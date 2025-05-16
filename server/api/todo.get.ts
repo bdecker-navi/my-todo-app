@@ -5,7 +5,7 @@ import { users } from '~~/server/data/users'
 export default defineEventHandler(async (event) => {
   // const userIdParam = getRouterParam(event, 'userId')
   const query = getQuery(event)
-  const userIdParam = query.userId
+  const userIdParam = query.userId as string
 
   if (!userIdParam) {
     throw createError({ statusCode: 400, statusMessage: 'Missing userId' })
