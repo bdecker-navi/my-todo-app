@@ -1,5 +1,4 @@
-import type { User } from "~~/server/types/user"
-
+import type { User } from '~~/server/types/user'
 
 export const users: User[] = [
   {
