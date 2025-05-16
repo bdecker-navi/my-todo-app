@@ -8,14 +8,12 @@ const user = ref({} as User)
 onMounted(async () => {
   await $fetch(`/api/user/${id}`, {
     method: 'GET',
-    onRequest() {
-      console.log('Request started')
-    },
     async onResponse({ response }) {
       if (!response.ok) {
         toast.add({
-          title: 'Uh oh! Something went wrong. Status: ' + response.statusText,
-          description: 'There was a problem with your request.'
+          title: 'Error Status: ' + response.status,
+          description: response.statusText,
+          color: 'error',
         })
         return
       }
