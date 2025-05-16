@@ -6,7 +6,7 @@ const toast = useToast()
 const user = ref({} as User | null)
 
 onMounted(async () => {
-  await $fetch(`/api/user/${id}`, {
+  await $fetch(`/api/user?id=${id}`, {
     method: 'GET',
     async onResponse({ response }) {
       if (!response.ok) {

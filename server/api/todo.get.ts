@@ -3,7 +3,10 @@ import { todos } from '~~/server/data/todos'
 import { users } from '~~/server/data/users'
 
 export default defineEventHandler(async (event) => {
-  const userIdParam = getRouterParam(event, 'userId')
+  // const userIdParam = getRouterParam(event, 'userId')
+  const query = getQuery(event)
+  const userIdParam = query.userId
+
   if (!userIdParam) {
     throw createError({ statusCode: 400, statusMessage: 'Missing userId' })
   }
