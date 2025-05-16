@@ -13,7 +13,7 @@ onMounted(async () => {
         toast.add({
           title: 'Error Status: ' + response.status,
           description: response.statusText,
-          color: 'error',
+          color: 'error'
         })
         return
       }
