@@ -10,7 +10,6 @@ useHead({
     lang: 'en'
   }
 })
-const route = useRoute()
 const title = 'TODO App'
 
 useSeoMeta({
@@ -36,7 +35,6 @@ useSeoMeta({
 
     <USeparator icon="i-simple-icons-nuxtdotjs" />
 
-    <UFooter>
-    </UFooter>
+    <UFooter />
   </UApp>
 </template>
