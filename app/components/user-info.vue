@@ -3,7 +3,7 @@ import type { User } from '~~/server/types/user'
 
 const { id } = useRoute().params
 const toast = useToast()
-const user = ref( {} as User | null)
+const user = ref({} as User | null)
 
 onMounted(async () => {
   await $fetch(`/api/user/${id}`, {
