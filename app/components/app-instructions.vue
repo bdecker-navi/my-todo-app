@@ -20,7 +20,6 @@
         }, {
           label: 'TODO List Page',
           to: 'todo/1',
-          target: '_blank',
           icon: 'i-lucide-file-code',
           color: 'neutral'
         }]"
